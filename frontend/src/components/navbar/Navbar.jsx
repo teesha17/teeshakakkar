@@ -14,35 +14,28 @@ export default function Navbar() {
   
     return (
       <>
-        <div className="navbar-fixed">
+        <div className="navbar-fixed" style={{ display: "flex", justifyContent: "center", flexDirection: "column" ,alignItems:"center"}}>
           <div className="navBar">
             <div className="hamburger" onClick={toggleMobileMenu}>
               <div className="line"></div>
               <div className="line"></div>
               <div className="line"></div>
             </div>
-            <div className="jscop" id="jscop">
-             <Link to='/' className="jscop">
-             JSCOP
-             </Link>
-            </div>
-            <div
-              className={`navbar-items ${isMobileMenuOpen ? "mobilemenu" : ""}`}
-            >
+            <div className={`navbar-items ${isMobileMenuOpen ? "mobilemenu" : ""}`}>
               <a onClick={closeMobileMenu}>
               <Link to='/'>Home</Link>
               </a>
               <a onClick={closeMobileMenu}>
-              <Link to='/team'>Team</Link>
+              <a href='#about'>About</a>
               </a>
               <a onClick={closeMobileMenu}>
-              <Link to='/bloghome'>Blog</Link>
+              <a href='#skills'>Skills</a>
               </a>
               <a onClick={closeMobileMenu}>
-              <Link to='/gallery'>Gallery</Link>
+              <a href='#projects'>Projects</a>
               </a>
               <a onClick={closeMobileMenu}>
-              <Link to='/contact'>Contact us</Link>
+              <a href='#contact'>Contact Me</a>
               </a>
             </div>
           </div>
